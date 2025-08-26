@@ -207,6 +207,76 @@
   </div>
 <script>
 const questions = [
+  { text: "„der Rücken“ bedeutet …", options: ["die Körperseite vorne", "die Körperseite hinten"], correct: 1 },
+  { text: "„der untere Rücken“ ist …", options: ["im Bereich der Lendenwirbelsäule", "im Nacken"], correct: 0 },
+  { text: "„Schwimmen ist gut für den Rücken.“ – das bedeutet …", options: ["Schwimmen stärkt die Rückenmuskulatur", "Schwimmen schwächt den Rücken"], correct: 0 },
+  { text: "„die Lenden“ bezeichnet …", options: ["die Region am unteren Rücken", "die Finger"], correct: 0 },
+  { text: "„Unter den Linden“ ist …", options: ["eine bekannte Straße in Berlin", "ein Waldstück in Bayern"], correct: 0 },
+
+  { text: "„Es macht mir Spaß + zu + INF“ – Welcher Satz ist korrekt?", options: ["Es macht mir Spaß, zu schwimmen.", "Es macht mir Spaß, schwimme."], correct: 0 },
+  { text: "„einschätzen“ bedeutet …", options: ["beurteilen", "einschlafen"], correct: 0 },
+  { text: "„schätzen“ bedeutet auch …", options: ["respektieren / Wert geben", "rennen"], correct: 0 },
+  { text: "„Was schätzt du, wie viel Geld verdiene ich pro Stunde?“ – hier bedeutet schätzen …", options: ["vermuten", "bezahlen"], correct: 0 },
+  { text: "„wahrnehmen“ heißt …", options: ["bewusst beobachten", "etwas wegwerfen"], correct: 0 },
+
+  { text: "„die Feier“ ist …", options: ["ein Fest", "ein Feuer"], correct: 0 },
+  { text: "„das Feuer“ ist …", options: ["Flammen, die Hitze erzeugen", "ein Tanz"], correct: 0 },
+  { text: "„Wenn es ein Feuer gibt, gibt es oft Hitze.“ – Was ist korrekt?", options: ["Feuer erzeugt Wärme", "Feuer macht immer Kälte"], correct: 0 },
+  { text: "„aus religiösen Gründen“ ist ein Beispiel für …", options: ["einen Grund / eine Motivation", "eine Ortsangabe"], correct: 0 },
+
+  { text: "„besitzen“ bedeutet …", options: ["Eigentum haben", "etwas verlieren"], correct: 0 },
+  { text: "„Wir nehmen alle unsere Sachen mit.“ – richtig übersetzt:", options: ["We take all our things with us.", "We buy all our things."], correct: 0 },
+  { text: "„mieten“ bedeutet …", options: ["etwas gegen Geld zeitweise nutzen", "Eigentum kaufen"], correct: 0 },
+  { text: "„vermieten“ bedeutet …", options: ["Eigentum an jemanden verleihen gegen Geld", "selbst eine Wohnung mieten"], correct: 0 },
+  { text: "„Ich bin ein Mieter.“ bedeutet …", options: ["Ich zahle Miete für eine Wohnung.", "Ich gebe meine Wohnung an andere weiter."], correct: 0 },
+  { text: "„Ich bin ein Vermieter.“ bedeutet …", options: ["Ich besitze eine Wohnung und vermiete sie.", "Ich wohne in einer gemieteten Wohnung."], correct: 0 },
+
+  { text: "„Fernweh“ bedeutet …", options: ["Lust, weit zu reisen", "Sehnsucht nach Zuhause"], correct: 0 },
+  { text: "„Seekrankheit“ bedeutet …", options: ["Übelkeit auf dem Schiff", "Freude am Schwimmen"], correct: 0 },
+  { text: "„Ich werde schnell seekrank.“ heißt …", options: ["I get seasick quickly.", "I get tired quickly."], correct: 0 },
+  { text: "„eine Kreuzfahrt“ ist …", options: ["eine Schiffsreise", "ein Flug über den Atlantik"], correct: 0 },
+  { text: "„auf einem Kreuzfahrtschiff“ – das ist …", options: ["ein großes Passagierschiff für Reisen", "ein kleines Fischerboot"], correct: 0 },
+  { text: "„eine bereichernde Erfahrung“ ist …", options: ["eine Erfahrung, die mich innerlich wachsen lässt", "eine Erfahrung, die mich ärmer macht"], correct: 0 },
+  { text: "„bereichern“ bedeutet …", options: ["reicher machen (materiell oder geistig)", "langweilen"], correct: 0 },
+
+  { text: "„sich vorstellen“ – Welcher Satz ist reflexiv?", options: ["Ich stelle mir vor, reich zu sein.", "Ich stelle den Stuhl ins Zimmer."], correct: 0 },
+  { text: "„Könntest du dir vorstellen, so etwas zu machen?“ bedeutet …", options: ["Can you imagine doing something like that?", "Can you explain how to do something like that?"], correct: 0 },
+  { text: "„vorschlagen“ heißt …", options: ["eine Idee anbieten", "jemandem etwas wegnehmen"], correct: 0 },
+
+  { text: "„der Schriftsteller“ ist …", options: ["jemand, der Bücher schreibt", "jemand, der Briefe bringt"], correct: 0 },
+  { text: "„sich an etwas erinnern“ bedeutet …", options: ["sich an etwas zurückdenken", "etwas sofort vergessen"], correct: 0 },
+  { text: "„Kannst du dich an den Namen erinnern?“ heißt …", options: ["Do you remember the name?", "Can you spell the name?"], correct: 0 },
+
+  { text: "„die Katze“ ist …", options: ["ein Tier", "ein Möbelstück"], correct: 0 },
+  { text: "„das Kätzchen“ ist …", options: ["eine kleine Katze", "ein kleiner Hund"], correct: 0 },
+  { text: "„das Katzerl“ ist …", options: ["eine süddeutsche / österreichische Form für Kätzchen", "ein altes Wort für Käse"], correct: 0 },
+  { text: "„das Stübchen“ bedeutet …", options: ["kleines Zimmer", "großer Raum"], correct: 0 },
+  { text: "„das Stüberl“ ist …", options: ["österreichisch für kleines Zimmer", "französisch für Küche"], correct: 0 },
+
+  { text: "„Es ist super, etwas zu tun.“ – Beispiel:", options: ["Es ist super, Deutsch zu lernen.", "Es ist super, Deutsch lernt."], correct: 0 },
+  { text: "„Ich habe den Plan, etwas zu tun.“ – Beispiel:", options: ["Ich habe den Plan, nach Berlin zu fahren.", "Ich habe den Plan, nach Berlin fahre."], correct: 0 },
+  { text: "„Ich plane, etwas zu tun.“ – Beispiel:", options: ["Ich plane, heute Abend zu kochen.", "Ich plane, heute Abend koche."], correct: 0 },
+
+  { text: "„Ich stelle mir vor, in Geld zu schwimmen.“ – das bedeutet …", options: ["Ich fantasiere darüber, sehr reich zu sein.", "Ich bade gerade im Wasser."], correct: 0 },
+  { text: "„Er kann sich nicht an den Namen erinnern.“ – das heißt …", options: ["He can’t remember the name.", "He can’t hear the name."], correct: 0 },
+  { text: "„Ich kann mich nicht daran erinnern.“ – „daran“ ersetzt …", options: ["an es", "in mir"], correct: 0 },
+
+  { text: "„It depends“ = …", options: ["Das hängt davon ab!", "Das hängt damit zu!"], correct: 0 },
+
+  { text: "„Ich habe viel Geld → Konjunktiv II?“", options: ["Ich hätte viel Geld.", "Ich habe gehabt viel Geld."], correct: 0 },
+  { text: "„Ich bin Millionär → Konjunktiv II?“", options: ["Ich wäre Millionär.", "Ich werde Millionär gewesen."], correct: 0 },
+  { text: "„Ich verdiene viel Geld → Konjunktiv II?“", options: ["Ich würde viel Geld verdienen.", "Ich hätte viel Geld verdient."], correct: 0 },
+
+  { text: "„Die Leute mögen mich → Passiv?“", options: ["Ich werde gemocht.", "Ich werde mögen."], correct: 0 },
+  { text: "„Die Leute lieben mich → Passiv?“", options: ["Ich werde geliebt.", "Ich werde liebe."], correct: 0 },
+  { text: "„Die Leute hassen mich → Passiv?“", options: ["Ich werde gehasst.", "Ich werde hassen."], correct: 0 },
+
+  { text: "„Ich schenke dir ein Auto“ vs. „Ich verschenke ein Auto“ – Unterschied?", options: ["schenken = jemandem direkt geben, verschenken = allgemein weggeben", "beide bedeuten genau dasselbe"], correct: 0 },
+  { text: "„Ich sende dir eine Mail“ vs. „Ich versende eine Mail“ – Unterschied?", options: ["senden = direkt an eine Person, versenden = allgemein verschicken", "beide sind identisch"], correct: 0 },
+
+  { text: "„Ich bitte dich, das Fenster zu schließen.“ bedeutet …", options: ["Ich fordere höflich etwas von dir.", "Ich gebe dir ein Geschenk."], correct: 0 },
+  { text: "„Mein Auto bietet Komfort.“ bedeutet …", options: ["Das Auto hat Bequemlichkeit.", "Das Auto ist unbequem."], correct: 0 },
+  { text: "„Volkswagen bietet Autos an.“ bedeutet …", options: ["Volkswagen verkauft Autos.", "Volkswagen kauft Autos."], correct: 0 },
   { text: "„geschlossen“ bedeutet:", options: ["nicht offen", "sehr warm"], correct: 0 },
   { text: "„eingeschlafen“ heißt:", options: ["wach geworden", "beim Liegen schlafen begonnen"], correct: 1 },
   { text: "„Alles steht still.“ bedeutet:", options: ["es passiert nichts mehr", "alle rennen sehr schnell"], correct: 0 },
