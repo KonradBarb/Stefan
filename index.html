@@ -206,42 +206,101 @@
     </div>
   </div>
 <script>
-const questions = [
-  { "text": "Du sprichst gern mit Leuten", "options": ["Tu aimes parler avec des gens", "Tu manges avec des gens"], "correct": 0 },
-  { "text": "neugierig", "options": ["curieux/curieuse", "furieux/furieuse"], "correct": 0 },
-  { "text": "Ich bin älter als sie.", "options": ["Je suis plus âgé qu’elle.", "Je suis plus jeune qu’elle."], "correct": 0 },
-  { "text": "Er ist mein ältester Sohn", "options": ["C’est mon fils aîné.", "C’est mon fils cadet."], "correct": 0 },
-  { "text": "Erfahrung im echten Leben", "options": ["expérience dans la vraie vie", "expérience dans un livre"], "correct": 0 },
-  { "text": "das Gefühl", "options": ["le sentiment", "la sensation de faim"], "correct": 0 },
-  { "text": "der Fortschritt", "options": ["le progrès", "le retour"], "correct": 0 },
-  { "text": "der Rückschritt", "options": ["le recul", "le progrès"], "correct": 0 },
-  { "text": "die Blase", "options": ["la bulle", "la balle"], "correct": 0 },
-  { "text": "eine Entscheidung treffen", "options": ["prendre une décision", "prendre une question"], "correct": 0 },
-  { "text": "Es hängt von der Person ab", "options": ["Ça dépend de la personne.", "Ça dépend du moment."], "correct": 0 },
-  { "text": "jeder einzelne", "options": ["chacun", "personne"], "correct": 0 },
-  { "text": "das Wechselgeld", "options": ["la monnaie", "l’argent de poche"], "correct": 0 },
-  { "text": "bescheiden", "options": ["modeste", "riche"], "correct": 0 },
-  { "text": "der Kalender", "options": ["le calendrier", "l’agenda électronique"], "correct": 0 },
-  { "text": "der Ohrenarzt", "options": ["l’oto-rhino", "le dentiste"], "correct": 0 },
-  { "text": "die Weltmeisterschaft", "options": ["la coupe du monde", "le championnat local"], "correct": 0 },
-  { "text": "das Gebäude", "options": ["le bâtiment", "la maison de campagne"], "correct": 0 },
-  { "text": "der Bauer", "options": ["le fermier", "le boulanger"], "correct": 0 },
-  { "text": "der Bauernhof", "options": ["la ferme", "le supermarché"], "correct": 0 },
-  { "text": "religiös", "options": ["religieux", "courageux"], "correct": 0 },
-  { "text": "aufwachsen", "options": ["grandir", "tomber"], "correct": 0 },
-  { "text": "erwachsen", "options": ["adulte", "enfant"], "correct": 0 },
-  { "text": "aus Spaß", "options": ["pour s’amuser", "par accident"], "correct": 0 },
-  { "text": "Ich arbeite um Geld zu verdienen.", "options": ["Je travaille pour gagner de l’argent.", "Je travaille pour perdre de l’argent."], "correct": 0 },
-  { "text": "Ich gehe zu einer Party um Leute kennenzulernen.", "options": ["Je vais à une fête pour rencontrer des gens.", "Je vais à une fête pour dormir."], "correct": 0 },
-  { "text": "Ich denke über meinen Job nach.", "options": ["Je réfléchis à mon travail.", "Je regarde mon travail."], "correct": 0 },
-  { "text": "Ich überlege, welchen Job ich machen möchte.", "options": ["J’envisage quel travail je veux faire.", "Je pense à regarder un film."], "correct": 0 },
-  { "text": "Ich denke über den Film nach.", "options": ["Je réfléchis au film.", "Je regarde le film."], "correct": 0 },
-  { "text": "Ich denke über das Abendessen nach.", "options": ["Je réfléchis au dîner.", "Je prépare le dîner."], "correct": 0 },
-  { "text": "Gesundheit", "options": ["la santé", "la maladie"], "correct": 0 },
-  { "text": "erkältet sein", "options": ["être enrhumé", "être fatigué"], "correct": 0 },
-  { "text": "der Schweiß", "options": ["la sueur", "le sang"], "correct": 0 },
-  { "text": "Schwitzen ist gesund", "options": ["Transpirer est sain.", "Transpirer est dangereux."], "correct": 0 }
-];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const questions =
+
+
+
+
+[
+  { "text": "Ich habe keinen ___.", 
+    "options": ["Einfluss", "Einfall"], 
+    "correct": 0 },
+
+  { "text": "Ich kann es nicht ___.", 
+    "options": ["ändern", "änderns"], 
+    "correct": 0 },
+
+  { "text": "Ich ___, was ich essen möchte.", 
+    "options": ["entscheide", "wähle mich"], 
+    "correct": 0 },
+
+  { "text": "Ich ___ einen Drink.", 
+    "options": ["wähle", "entscheide"], 
+    "correct": 0 },
+
+  { "text": "Ich ___ mich für einen Drink.", 
+    "options": ["entscheide", "wähle"], 
+    "correct": 0 },
+
+  { "text": "Ein ___ bei Erkältung ist heißer Tee.", 
+    "options": ["Hausmittel", "Haushalt"], 
+    "correct": 0 },
+
+  { "text": "Ich muss eine ___ nehmen.", 
+    "options": ["Tablette", "Tabelle"], 
+    "correct": 0 },
+
+  { "text": "Ich habe eine ___.", 
+    "options": ["Erkältung", "Erklärung"], 
+    "correct": 0 },
+
+  { "text": "Wenn der ___ weh tut, trinke ich heißen Tee.", 
+    "options": ["Hals", "Haar"], 
+    "correct": 0 },
+
+  { "text": "Ich habe ___.", 
+    "options": ["Halsschmerzen", "Halsfreude"], 
+    "correct": 0 },
+
+  { "text": "Bei Rückenschmerzen sollte man sich ___", 
+    "options": ["dehnen", "danken"], 
+    "correct": 0 },
+
+  { "text": "5 Minuten von meinem Büro gibt es ein ___.", 
+    "options": ["Café", "Halsweh"], 
+    "correct": 0 }
+]
+
+
+
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     let currentQuestion = 0;
     let score = 0;
     let incorrectAnswers = [];
