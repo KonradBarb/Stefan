@@ -330,12 +330,42 @@ const questions =
     let incorrectAnswers = [];
     let userAnswers = [];
 
-    function startQuiz() {
-      document.querySelector('.start-screen').style.display = 'none';
-      document.querySelector('.question-screen').style.display = 'flex';
-      document.body.style.overflow = 'hidden'; // ✨ Scrollen verhindern
-      showQuestion();
-    }
+function notifyTeacherTestStarted() {
+  const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbx03zKuL7iDxkqNSr8Dz9cvO91xt3Li0FknB7pbE7IP2lu2F8ev5Vpsi0vFUnFyTt_CWw/exec";
+  const SECRET = "SxhuleeerQuiz_2025!_x98d76+22__MEINSECRET";
+
+  const payload = {
+    secret: SECRET,
+    studentName: "Stefan",
+    eventType: "start",
+    quizTitle: document.title,
+    pageUrl: window.location.href
+  };
+
+  const blob = new Blob([JSON.stringify(payload)], { type: "application/json" });
+
+  if (navigator.sendBeacon) {
+    navigator.sendBeacon(WEB_APP_URL, blob);
+  } else {
+    fetch(WEB_APP_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    }).catch(() => {});
+  }
+}
+
+
+function startQuiz() {
+  notifyTeacherTestStarted(); 
+
+  document.querySelector('.start-screen').style.display = 'none';
+  document.querySelector('.question-screen').style.display = 'flex';
+  document.body.style.overflow = 'hidden'; 
+  showQuestion();
+}
+
 
     function showQuestion() {
       const container = document.getElementById('question-container');
