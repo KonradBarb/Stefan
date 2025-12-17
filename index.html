@@ -331,8 +331,8 @@ const questions =
     let userAnswers = [];
 
 function notifyTeacherTestStarted() {
-  const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbx03zKuL7iDxkqNSr8Dz9cvO91xt3Li0FknB7pbE7IP2lu2F8ev5Vpsi0vFUnFyTt_CWw/exec";
-  const SECRET = "SxhuleeerQuiz_2025!_x98d76+22__MEINSECRET";
+  const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbx8-HmAz4UnwRaza--_tDu9Vg9S8DeSHxsXTnd3Yrl7ebtbB7A4R0dq-a3kKk-DJpCj7A/exec";
+  const SECRET = "SxhuleeerQuiz_2025_x98d76_22_MEINSECRET";
 
   const payload = {
     secret: SECRET,
@@ -357,15 +357,13 @@ function notifyTeacherTestStarted() {
 }
 
 
-function startQuiz() {
-  notifyTeacherTestStarted(); 
-
-  document.querySelector('.start-screen').style.display = 'none';
-  document.querySelector('.question-screen').style.display = 'flex';
-  document.body.style.overflow = 'hidden'; 
-  showQuestion();
-}
-
+    function startQuiz() {
+  notifyTeacherTestStarted();
+      document.querySelector('.start-screen').style.display = 'none';
+      document.querySelector('.question-screen').style.display = 'flex';
+      document.body.style.overflow = 'hidden'; // ✨ Scrollen verhindern
+      showQuestion();
+    }
 
     function showQuestion() {
       const container = document.getElementById('question-container');
