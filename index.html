@@ -331,39 +331,30 @@ const questions =
     let userAnswers = [];
 
 function notifyTeacherTestStarted() {
-  const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbx8-HmAz4UnwRaza--_tDu9Vg9S8DeSHxsXTnd3Yrl7ebtbB7A4R0dq-a3kKk-DJpCj7A/exec";
+  const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwjZflcxCygbQDkWQHEv1ZpDbTPLzwZV0wA3d21WlAFwpgHyeHWWWZBw5cVUsO1b9HScg/exec";
   const SECRET = "SxhuleeerQuiz_2025_x98d76_22_MEINSECRET";
 
-  const payload = {
+  const params = new URLSearchParams({
     secret: SECRET,
     studentName: "Stefan",
     eventType: "start",
     quizTitle: document.title,
     pageUrl: window.location.href
-  };
+  });
 
-  const blob = new Blob([JSON.stringify(payload)], { type: "application/json" });
-
-  if (navigator.sendBeacon) {
-    navigator.sendBeacon(WEB_APP_URL, blob);
-  } else {
-    fetch(WEB_APP_URL, {
-      method: "POST",
-      mode: "no-cors",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
-    }).catch(() => {});
-  }
+  const img = new Image();
+  img.src = WEB_APP_URL + "?" + params.toString();
 }
 
+function startQuiz() {
+  notifyTeacherTestStarted(); // ✅ Mail-Trigger
 
-    function startQuiz() {
-  notifyTeacherTestStarted();
-      document.querySelector('.start-screen').style.display = 'none';
-      document.querySelector('.question-screen').style.display = 'flex';
-      document.body.style.overflow = 'hidden'; // ✨ Scrollen verhindern
-      showQuestion();
-    }
+  document.querySelector('.start-screen').style.display = 'none';
+  document.querySelector('.question-screen').style.display = 'flex';
+  document.body.style.overflow = 'hidden'; // ✨ Scrollen verhindern
+  showQuestion();
+}
+
 
     function showQuestion() {
       const container = document.getElementById('question-container');
